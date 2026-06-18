@@ -27,15 +27,17 @@ Each EC2 instance hosts the same web application with a unique identifier (Insta
 
 ## Architecture
 
-User
-↓
-Application Load Balancer
-↓
-Instance 1
-Instance 2
-Instance 3
-Instance 4
-
+```text
+                User
+                  |
+                  v
+    Application Load Balancer
+                  |
+                  v
+    +---------+---------+---------+---------+
+    |Instance1|Instance2|Instance3|Instance4|
+    +---------+---------+---------+---------+
+```
 ## How It Works
 
 The Application Load Balancer receives incoming requests and forwards them to healthy EC2 instances registered in the target group. Refreshing the page may display a different instance, demonstrating load balancing.
