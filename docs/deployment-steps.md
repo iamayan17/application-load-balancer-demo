@@ -15,8 +15,8 @@ Security Group:
 Connect to each EC2 instance and run:
 
 ```bash
-sudo dnf update -y
-sudo dnf install httpd -y
+sudo yum update -y
+sudo yum install httpd -y
 sudo systemctl enable httpd
 sudo systemctl start httpd
 ```
